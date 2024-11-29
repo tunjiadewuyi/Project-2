@@ -1,0 +1,14 @@
+-- Create the database
+CREATE DATABASE signup_db;
+
+-- Use the database
+USE signup_db;
+
+-- Create the users table
+CREATE TABLE users (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
